@@ -1,41 +1,40 @@
 {
+  "root": true,
   "env": {
     "es2021": true,
     "jest": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": "plugin:vue/vue3-recommended",
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "plugins": [ "@stylistic/js" ],
   "rules": {
 
-    "@stylistic/js/indent": [ "error", 2, {
-      "CallExpression": { "arguments": 2 },
-      "MemberExpression": 2
-    }],
+    //spacing, indent and next line 
+    "vue/html-indent": "off",
+    "vue/max-attributes-per-line": "off",
 
-    "@stylistic/js/keyword-spacing": [ "error", {
-      "before": true,
-      "after": true,
-      "overrides": {
-        "if": { "after": false },
-        "for": { "after": false },
-        "while": { "after": false }
-      }
-    }],
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/multiline-html-element-content-newline": "off",
 
-    "@stylistic/js/arrow-spacing": [ "error", {
-      "before": true,
-      "after": true
-    }],
+    "vue/html-closing-bracket-newline": "off",
+    "vue/html-closing-bracket-spacing": "off",
 
-    "@stylistic/js/space-before-function-paren": [ "error", {
-      "anonymous": "always",
-      "named": "never",
-      "asyncArrow": "always"
-    }]
+    "vue/first-attribute-linebreak": "off",
+    // spaces
+    "vue/space-infix-ops": "off",
+    "vue/no-spaces-around-equal-signs-in-attribute": "off",
+    "vue/no-multi-spaces": "off", 
+
+    //order
+    "vue/attributes-order": "off",
+    //self closing 
+    "vue/html-self-closing": "off",
+    //naming camel to kebab
+    "vue/attribute-hyphenation": "off",
+    //quotes
+    "vue/html-quotes": "off"
 
   }
 }  
